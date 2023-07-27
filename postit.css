@@ -27,6 +27,7 @@ body {
   height: 150px;
   -webkit-box-shadow: inset 0px -40px 27px -15px rgba(0, 0, 0, 0.43), 5px 4px 4px 1px rgba(0, 0, 0, 0.43);
   box-shadow: inset 0px -40px 27px -15px rgba(0, 0, 0, 0.43), 5px 4px 4px 1px rgba(0, 0, 0, 0.43);
+  transition: 300ms;
 }
 
 .title p {
@@ -98,4 +99,10 @@ title:not(:last-child) {
 
 .title2:nth-child(4) {
   background-color: #c7f7c9;
+}
+
+.title:hover,
+.title2:hover {
+  scale: 1.2;
+  translate: 0 5px;
 }
