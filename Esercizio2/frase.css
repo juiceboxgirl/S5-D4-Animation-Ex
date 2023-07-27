@@ -19,19 +19,50 @@
 }
 
 .parole {
-  animation: changeWord 2s infinite forwards;
+  position: relative;
+  width: 3em;
+}
+
+i {
+  position: absolute;
+  width: 100%;
+  top: -50px;
+  opacity: 0;
+  animation: changeWord 9s linear infinite;
 }
 
 @keyframes changeWord {
-  from {
-    .parole: nth-child(1);
+  0%,
+  33.33% {
+    top: -50px;
+    opacity: 0;
   }
+  33.33%,
+  66.66% {
+    top: 0;
+    opacity: 1;
+  }
+  66.66%,
+  100% {
+    top: 50px;
+    opacity: 0;
+  }
+}
 
-  50% {
-    .parole: nth-child(2);
-  }
+i:nth-child(1) {
+  position: absolute;
+  margin-left: 5px;
+  animation-delay: 0s;
+}
 
-  to {
-    .parole: nth-child(3);
-  }
+i:nth-child(2) {
+  position: absolute;
+  margin-left: 5px;
+  animation-delay: 3s;
+}
+
+i:nth-child(3) {
+  position: absolute;
+  margin-left: 5px;
+  animation-delay: 6s;
 }
