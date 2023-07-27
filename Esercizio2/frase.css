@@ -8,3 +8,30 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+#testoAlternato {
+  margin: 2em;
+  font-family: "Bree Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  padding: 1.5em;
+  border: 2px solid rgba(0, 0, 0, 0.551);
+}
+
+.parole {
+  animation: changeWord 2s infinite forwards;
+}
+
+@keyframes changeWord {
+  from {
+    .parole: nth-child(1);
+  }
+
+  50% {
+    .parole: nth-child(2);
+  }
+
+  to {
+    .parole: nth-child(3);
+  }
+}
